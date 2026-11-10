@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #f7f6f3;
+}
+
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; line-height: 1.25; color: #14213d; }
+
+.top {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; align-items: center; justify-content: space-between;
+  padding: .75rem 1rem; background: #14213d; border-bottom: 8px solid #e0a526;
+}
+.logo { font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; color: #fff; text-decoration: none; }
+.top nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+.top nav a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: .5rem 1rem;
+  color: #fff; text-decoration: none; border: 1px solid #fff; border-radius: 999px;
+}
+.top nav a[aria-current="page"], .top nav a:hover { background: #fff; color: #14213d; }
+
+main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
+footer { margin-top: 2rem; padding: 1rem; background: #14213d; color: #fff; }
+
+fieldset { background: #fff; border: 1px solid #ddd9cf; border-top: 5px solid #b3261e; margin: 0 0 1.25rem; padding: 1rem; }
+legend { font-weight: 700; color: #14213d; padding: 0 .5rem; }
+label { display: block; font-weight: 700; margin: .9rem 0 .25rem; }
+
+input, select, textarea {
+  display: block; width: 100%; min-height: 44px; padding: .55rem .7rem;
+  font: inherit; color: #1f2933; background: #fff; border: 2px solid #52606d; border-radius: 6px;
+}
+input[aria-invalid="true"], select[aria-invalid="true"] { border: 3px solid #b3261e; }
+
+.ayuda { margin: .25rem 0 0; font-size: .9rem; color: #3e4c59; }
+.error { margin: .25rem 0 0; min-height: 0; font-weight: 700; color: #b3261e; }
+.resumen { color: #b3261e; font-weight: 700; }
+.resultado { background: #fff; border-left: 6px solid #0b6b4f; padding: .75rem 1rem; color: #0b6b4f; font-weight: 700; }
+.resultado:empty { display: none; }
+
+.btn {
+  display: inline-block; min-height: 44px; padding: .55rem 1.25rem; font: inherit; font-weight: 700;
+  color: #fff; background: #b3261e; border: 0; border-radius: 6px; text-decoration: none; cursor: pointer;
+}
+
+/* Foco siempre visible */
+a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 3px solid #1f5fae; outline-offset: 2px;
+}
+.top a:focus-visible { outline-color: #e0a526; }
