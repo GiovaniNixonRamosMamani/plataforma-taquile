@@ -22,3 +22,7 @@ Abrir la carpeta en Visual Studio Code y servir `index.html` con el servidor loc
 ## Validación
 - HTML: validator.w3.org, sin errores.
 - CSS: jigsaw.w3.org/css-validator, sin errores.
+
+## 🌐 Ver página web en vivo
+Puedes revisar el proyecto funcionando aquí: https://giovaninixonramosmamani.github.io/plataforma-taquile/
+
