@@ -1,0 +1,5 @@
+# Archivos que no deben subirse al repositorio
+.env
+*.log
+Thumbs.db
+.DS_Store
