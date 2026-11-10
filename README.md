@@ -19,10 +19,6 @@ Abrir la carpeta en Visual Studio Code y servir `index.html` con el servidor loc
 - `js/pedido.js`: mensajes de error del formulario.
 - `img/`: imágenes del proyecto.
 
-## Herramientas de IA generativa usadas
-
-Claude (Anthropic): apoyo para escribir el código base del formulario y la lista de accesibilidad. El estudiante revisó y probó el resultado.
-
 ## Validación
 - HTML: validator.w3.org, sin errores.
 - CSS: jigsaw.w3.org/css-validator, sin errores.
