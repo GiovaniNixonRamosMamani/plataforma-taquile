@@ -52,3 +52,53 @@ a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visib
   outline: 3px solid #1f5fae; outline-offset: 2px;
 }
 .top a:focus-visible { outline-color: #e0a526; }
+
+/* ===== Página de inicio (práctica G-02 integrada) ===== */
+main.ancha { max-width: none; padding: 0; }
+.contenido { max-width: 62rem; margin: 0 auto; padding: 1rem; }
+section { margin-bottom: 2.5rem; }
+
+.hero {
+  padding: 3.5rem 2rem 0;
+  color: #fff;
+  background:
+    linear-gradient(rgba(20, 33, 61, .78), rgba(20, 33, 61, .78)),
+    url("../img/taquile-panoramica.jpg") center / cover,
+    #14213d;
+}
+.hero-in { max-width: 62rem; margin: 0 auto; padding-bottom: 2.5rem; }
+.hero h1 { color: #fff; font-size: clamp(2.6rem, 9vw, 4.8rem); margin: 0 0 .5rem; }
+.hero p { max-width: 36rem; font-size: 1.15rem; color: #dbe4f0; }
+.hero .btn { border: 2px solid #fff; }
+.hero::after {
+  content: ""; display: block; height: 14px; margin: 0 -2rem;
+  background: repeating-linear-gradient(90deg, #b3261e 0 24px, #f7f6f3 24px 32px, #14213d 32px 56px, #e0a526 56px 64px);
+}
+
+h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; line-height: 1.25; color: #14213d; border-left: 6px solid #b3261e; padding-left: .75rem; }
+h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; color: #14213d; margin-top: 0; }
+
+figure { margin: 1.25rem 0; }
+img { display: block; width: 100%; max-height: 26rem; object-fit: cover; border-radius: 4px; }
+figcaption { font-size: .85rem; color: #52606d; margin-top: .4rem; }
+
+.datos { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; }
+.datos li { background: #14213d; color: #dbe4f0; padding: 1rem 1.25rem; border-radius: 4px; }
+.cifra { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 2rem; color: #e0a526; }
+
+#actividades { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+#actividades h2 { grid-column: 1 / -1; margin-bottom: 0; }
+.actividad { background: #fff; border: 1px solid #ddd9cf; border-top: 5px solid #b3261e; padding: 1.25rem; margin: 0; }
+.destacada { grid-column: 1 / -1; border-top-color: #e0a526; }
+.destacada img { margin-top: 1rem; max-height: 20rem; }
+
+p { color: #1f2933; }                              /* (0, 0, 1) */
+.nota { color: #8a3b12; font-weight: 700; }        /* (0, 1, 0) */
+.destacada .nota { color: #0b6b4f; }               /* (0, 2, 0): gana en la actividad destacada */
+
+#contacto a { color: #e0a526; }
+#contacto p { color: #dbe4f0; }                    /* (1, 0, 1) */
+
+@media (max-width: 40rem) {
+  #actividades { grid-template-columns: 1fr; }
+}
