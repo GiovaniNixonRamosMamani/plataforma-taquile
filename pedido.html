@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hacer un pedido · Textiles Taquile</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="index.html">Textiles Taquile</a>
+    <nav aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="pedido.html" aria-current="page">Hacer un pedido</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Hacer un pedido</h1>
+    <p>Los campos sin la palabra «opcional» son obligatorios.</p>
+    <p id="resumen" class="resumen" role="alert"></p>
+    <form id="pedido" action="/pedidos" method="post">
+      <fieldset>
+        <legend>Datos del cliente</legend>
+
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" required minlength="3" autocomplete="name" aria-describedby="error-nombre">
+        <p id="error-nombre" class="error" aria-live="polite"></p>
+
+        <label for="celular">Celular</label>
+        <input id="celular" name="celular" type="tel" required pattern="9[0-9]{8}" autocomplete="tel" aria-describedby="ayuda-celular error-celular">
+        <p id="ayuda-celular" class="ayuda">9 dígitos, empieza en 9. Ejemplo: 951234567</p>
+        <p id="error-celular" class="error" aria-live="polite"></p>
+
+        <label for="correo">Correo electrónico (opcional)</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" aria-describedby="error-correo">
+        <p id="error-correo" class="error" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pedido</legend>
+
+        <label for="producto">Producto</label>
+        <select id="producto" name="producto" required aria-describedby="error-producto">
+          <option value="">Elige un producto</option>
+          <option value="chullo">Chullo tejido a mano · S/ 45.00</option>
+          <option value="faja" disabled>Faja multicolor · Agotado</option>
+          <option value="manta">Manta andina · S/ 120.00</option>
+          <option value="orejeras">Chullo con orejeras · S/ 55.00</option>
+        </select>
+        <p id="error-producto" class="error" aria-live="polite"></p>
+
+        <label for="cantidad">Cantidad</label>
+        <input id="cantidad" name="cantidad" type="number" required min="1" max="20" value="1" aria-describedby="ayuda-cantidad error-cantidad">
+        <p id="ayuda-cantidad" class="ayuda">Entre 1 y 20 unidades.</p>
+        <p id="error-cantidad" class="error" aria-live="polite"></p>
+
+        <label for="comentario">Comentario (opcional)</label>
+        <textarea id="comentario" name="comentario" rows="3" maxlength="200"></textarea>
+      </fieldset>
+
+      <button class="btn" type="submit">Enviar pedido</button>
+    </form>
+    <p id="resultado" class="resultado" role="status"></p>
+  </main>
+  <footer>
+    <p>Proyecto académico · Datos de prueba ficticios. El formulario aún no se conecta a un servidor.</p>
+  </footer>
+  <script src="js/pedido.js"></script>
+</body>
+</html>
